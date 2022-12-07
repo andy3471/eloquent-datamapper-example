@@ -7,9 +7,12 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
+        "haydenpierce/class-finder": "*",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "proai/laravel-datamapper": "1.0.x-dev",
+        "proai/laravel-datamapper-presenter": "1.0.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -22,9 +25,13 @@
     },
     "repositories": [
         {
-            "type": "file",
+            "type": "path",
             "url": "../laravel-datamapper"
         },
+        {
+            "type": "path",
+            "url": "../laravel-datamapper-presenter"
+        }
     ],
     "autoload": {
         "psr-4": {

@@ -21,6 +21,7 @@ services:
         volumes:
             - '.:/var/www/html'
             - '../laravel-datamapper:/var/www/laravel-datamapper'
+            - '../laravel-datamapper-presenter:/var/www/laravel-datamapper-presenter'
         networks:
             - sail
         depends_on:

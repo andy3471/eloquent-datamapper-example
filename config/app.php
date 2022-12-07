@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \ProAI\Datamapper\DatamapperServiceProvider::class,
 
         /*
          * Application Service Providers...
