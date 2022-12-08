@@ -16,7 +16,7 @@ class UserRepository
     /**
      * @return array
      */
-    public function all() {
-        return $this->em->entity('App\Entities\User')->all();
+    public function first() {
+        return $this->em->entity('App\Entities\User')->first();
     }
 }

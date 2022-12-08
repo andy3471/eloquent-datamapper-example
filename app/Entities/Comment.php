@@ -24,7 +24,7 @@ class Comment extends Entity
     protected $name;
 
     /**
-     * @ORM\Relation(type="hasOne", relatedEntity="App\Entities\User")
+     * @ORM\Relation(type="belongsTo", relatedEntity="App\Entities\User")
      */
     protected $user;
 }
