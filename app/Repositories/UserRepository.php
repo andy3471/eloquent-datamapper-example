@@ -3,20 +3,12 @@
 namespace App\Repositories;
 
 use ProAI\Datamapper\EntityManager;
+use ProAI\Datamapper\Repositories\EntityRepository;
 
-class UserRepository
+class UserRepository extends EntityRepository
 {
-    /**
-     * @param EntityManager $em
-     */
-    public function __construct(EntityManager $em) {
-        $this->em = $em;
-    }
-
-    /**
-     * @return array
-     */
-    public function first() {
-        return $this->em->entity('App\Entities\User')->first();
+    public function __construct(EntityManager $em, $class)
+    {
+        parent::__construct($em, $class);
     }
 }

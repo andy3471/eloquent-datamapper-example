@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
             [$contract, $repository, $model] = $binding;
 
             $this->app->bind($contract, function ($app) use ($repository, $model) {
-                return new $repository(new EntityManager());
+                return new $repository(new EntityManager(), $model);
             });
         }
     }

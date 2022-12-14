@@ -2,8 +2,8 @@
 
 namespace App\Entities;
 
-use ProAI\Datamapper\Support\Entity;
 use ProAI\Datamapper\Annotations as ORM;
+use ProAI\Datamapper\Support\Entity;
 
 /**
  * @ORM\Entity
@@ -19,6 +19,11 @@ class User extends Entity
     protected $id;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $firstName;
+
+    /**
      * @ORM\Relation(type="hasMany", relatedEntity="App\Entities\Comment")
      */
     protected $comments;
@@ -32,11 +37,27 @@ class User extends Entity
     }
 
     /**
-     * @param mixed $id
+     * @param  mixed  $id
      */
     public function setId($id): void
     {
         $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param  mixed  $firstName
+     */
+    public function setFirstName($firstName): void
+    {
+        $this->firstName = $firstName;
     }
 
     /**
@@ -48,12 +69,10 @@ class User extends Entity
     }
 
     /**
-     * @param mixed $comments
+     * @param  mixed  $comments
      */
     public function setComments($comments): void
     {
         $this->comments = $comments;
     }
-
-
 }

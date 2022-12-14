@@ -2,8 +2,8 @@
 
 namespace App\Entities;
 
-use ProAI\Datamapper\Support\Entity;
 use ProAI\Datamapper\Annotations as ORM;
+use ProAI\Datamapper\Support\Entity;
 
 /**
  * @ORM\Entity

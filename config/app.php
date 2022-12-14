@@ -210,7 +210,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-         'User' => App\Facades\User::class,
+        'User' => App\Facades\User::class,
+        'EM' => 'ProAI\Datamapper\Support\Facades\EntityManager',
     ])->toArray(),
 
 ];
